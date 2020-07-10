@@ -21,13 +21,13 @@ steps:
 - task: shellexec@0
   inputs:
     code: |
-      git checkout qa
+      git checkout master
       
-      git pull https://$(gitusername):$(gitpassword)@github.com/rameshbalidi/wordpress dev
+      git pull https://$(gitusername):$(gitpassword)@github.com/rameshbalidi/wordpress qa
       
-      git merge dev
+      git merge qa
       
-      git push https://$(gitusername):$(gitpassword)@github.com/rameshbalidi/wordpress qa
+      git push https://$(gitusername):$(gitpassword)@github.com/rameshbalidi/wordpress master
 
 - task: SSH@0
   inputs:
