@@ -21,6 +21,8 @@ steps:
 - task: shellexec@0
   inputs:
     code: |
+      git config --global user.email "ramesh.balidi@gmail.com"
+      git config --global user.name "rameshbalidi"
       git checkout qa
       
       git pull https://$(gitusername):$(gitpassword)@github.com/rameshbalidi/wordpress dev
