@@ -39,7 +39,7 @@ steps:
 - task: CopyFilesOverSSH@0
   inputs:
     sshEndpoint: 'ssh-wordpress-stage'
-    sourceFolder: '/home/vsts/work/1/s/db/'
+    sourceFolder: '/home/vsts/work/1/s/'
     contents: '!**/.git/**'
     targetFolder: '/var/www/html/'
     readyTimeout: '20000'
